@@ -1,27 +1,23 @@
-package com.exercicio;
 
 import javax.swing.JOptionPane;
 
 public class exercicio5 {
-	public static void main(String[] args) {
-		
-	String horas;
-	int hora ;
-	String minutos ;
-	int minuto ;
-	int total;
-	
-	horas = JOptionPane.showInputDialog("Digite a hora: ");
-	hora = Integer.parseInt(horas);
-	
-	minutos = JOptionPane.showInputDialog("Digite os minutos: ");
-	minuto = Integer.parseInt(minutos);
-	
-	total = (hora * 60) + minuto;
-	
-	JOptionPane.showMessageDialog(null, "Total de minutos desde o inicio do dia: " + total + " minutos.");
-	
-	
-	}
 
+    public static void main(String[] args) {
+        String entradaIdade, classeEleitoral;
+        int idade;
+
+        entradaIdade = JOptionPane.showInputDialog("Digite a idade da pessoa: ");
+        idade = Integer.parseInt(entradaIdade);
+
+        if (idade < 16) {
+            classeEleitoral = "não eleitor";
+        } else if (idade >= 18 && idade <= 65) {
+            classeEleitoral = "eleitor obrigatório";
+        } else {
+            classeEleitoral = "eleitor facultativo";
+        }
+
+        JOptionPane.showMessageDialog(null, "classe eleitoral: " + classeEleitoral);
+    }
 }
